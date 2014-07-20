@@ -76,15 +76,29 @@
 		/*border-bottom: 1px solid #4D4D4D;*/
 		min-height: 163px;
 	}
-	.catchy-slogan {
-		color: #fff;
-		font-size: 45px;
-		padding-top: 20px;
+/* Shrink the catchy slogan 
+	when on mobile devices */
+	@media (max-width: 375px) {
+		.catchy-slogan {
+			color: #fff;
+			font-size: 22px;
+			padding-top: 20px;
+		}
+		.catchy-slogan span {
+			font-size: 18px;
+		}
 	}
-	.catchy-slogan span {
-		font-size: 40px;
+	@media (min-width: 375px) {
+		.catchy-slogan {
+			color: #fff;
+			font-size: 45px;
+			padding-top: 20px;
+		}
+		.catchy-slogan span {
+			font-size: 40px;
+		}
 	}
-
+	
 	/*pilot mid content section*/
 
 	.mid-content-section {
@@ -109,6 +123,8 @@
 			height: 531px;
 		}
 	}
+	
+
 	
 	.phone-image {
 		width: 250px;
@@ -152,6 +168,7 @@
 				</form>
 			</div>
 		</div>
+	</div>
 	</div>
 	  <div class="container mid-section">
 			<div class="row">
