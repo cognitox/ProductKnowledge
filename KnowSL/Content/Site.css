@@ -1,0 +1,161 @@
+﻿
+/*bootstrap ovverides*/
+html
+{
+    background-color: #4D4D4D;
+}
+html, body
+{
+    font-family: 'Quicksand' , sans-serif !important;
+}
+.container
+{
+    width: 100%;
+}
+
+
+/*header*/
+
+.header
+{
+    background-color: #4D4D4D;
+    border-bottom: 1px solid white;
+}
+.header label
+{
+    color: #fff;
+    white-space: nowrap;
+}
+/*branding*/
+.brand-site
+{
+    color: #fff;
+    font-size: 32px;
+    margin-top: 10px;
+}
+.logo-img
+{
+    padding-right: 22px;
+}
+
+/*login*/
+.login-group
+{
+    padding: 10px;
+}
+
+/* slogan content*/
+.mid-section
+{
+    background-color: #55B6D9; /*border-bottom: 1px solid #4D4D4D;*/
+    min-height: 163px;
+}
+/* Shrink the catchy slogan 
+	when on mobile devices */
+@media (max-width: 375px)
+{
+    .catchy-slogan
+    {
+        color: #fff;
+        font-size: 22px;
+        padding-top: 20px;
+    }
+    .catchy-slogan span
+    {
+        font-size: 18px;
+    }
+}
+@media (min-width: 375px)
+{
+    .catchy-slogan
+    {
+        color: #fff;
+        font-size: 45px;
+        padding-top: 20px;
+    }
+    .catchy-slogan span
+    {
+        font-size: 40px;
+    }
+}
+
+/*pilot mid content section*/
+
+.mid-content-section
+{
+    background-color: #F2F2F2 !important;
+    min-height: 300px;
+    z-index: -3;
+}
+
+@media (min-width: 991px)
+{
+    .phone-image
+    {
+        position: absolute;
+        top: -35px;
+    }
+    .star
+    {
+        height: 290px;
+    }
+
+    /*backgrounds*/
+    .star1
+    {
+        background-image: url('star1.jpg');
+        background-position: 43px 266px;
+    }
+    .star2
+    {
+        background-image: url('star2.jpg');
+        background-position: 252px 265px;
+        left: 226px;
+    }
+    .star3
+    {
+        background-image: url('star3.jpg');
+        background-position: 397px 263px;
+        left: 454px;
+    }
+    .star4
+    {
+        background-image: url('star4.jpg');
+        background-position: 680px 248px;
+        left: 684px;
+    }
+
+    .star
+    {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 211px;
+        position: absolute;
+    }
+
+}
+@media (max-width: 991px)
+{
+
+}
+
+.phone-image
+{
+    width: 250px;
+    height: 393px;
+}
+/*footer*/
+.footer-section
+{
+    border-bottom: 1px solid white;
+    background-color: #55B6D9;
+    min-height: 86px;
+}
+
+
+/*validation - summary*/
+
+.validation-summary-errors
+{
+    color: rgb(199, 199, 132);
+}

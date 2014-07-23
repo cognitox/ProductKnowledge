@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="container mid-section">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="/Content/images/barcode.jpg" class="pull-right" />
+        </div>
+        <div class="col-md-10">
+            <p class="catchy-slogan">
+                Decoding product ingredients
+                <br />
+                <span>so you can choose what's best for you</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container mid-content-section">
+    <div class="star1 star">
+    </div>
+    <div class="star2 star">
+    </div>
+    <div class="star3 star">
+    </div>
+    <div class="star4 star">
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+            <h1>
+                Want to join our pilot program?</h1>
+            <form class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <div class="col-xs-8">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary">
+                            Sign Up</button>
+                    </div>
+                </div>
+            </fieldset>
+            </form>
+            <script type="text/javascript">
+                (function () {
+                    $(document).ready(function () {
+                        $('.carrot').click(function () {
+                            $('.answer-prompt').slideToggle();
+                        });
+                    });
+                })(jQuery);
+            </script>
+            <div class="info-box" style="font-weight: bold; line-height: 33px;">
+                <div style="white-space: nowrap;">
+                    How do I contact KnowSL? <a class="carrot" style="cursor: pointer; text-decoration: none;">
+                        &plusmn;</a>
+                </div>
+                <div class="answer-prompt" style="display: none;">
+                    mailbox@knowsl.com
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img class="phone-image" src="/Content/images/cellphone.png">
+        </div>
+    </div>
+</div>
