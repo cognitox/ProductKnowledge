@@ -8,10 +8,10 @@ namespace KnowSL.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(String message = @"")
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
-
+            ViewBag.Message = message;
+            
             return View();
         }
 
