@@ -1,0 +1,27 @@
+﻿@model IEnumerable<KnowSL.Database.NewsLetter>
+@{
+    ViewBag.Title = "BetaUserList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .style-table
+    {
+        margin: 0 auto;
+        min-height: 400px;
+        padding-top: 36px;
+        font-weight: bold;
+        width: 700px;
+    }
+</style>
+<ul class="style-table">
+    <li style="list-style: none;">
+        <h4>
+            Beta Signup List</h4>
+    </li>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.DisplayFor(modelItem => item.email) [@Html.DisplayFor(modelItem => item.CreatedOn)]
+        </li>
+    }
+</ul>

@@ -445,6 +445,8 @@ namespace KnowSL.Database
 		
 		private string _email;
 		
+		private System.DateTime _CreatedOn;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -453,6 +455,8 @@ namespace KnowSL.Database
     partial void OnNewsLetterIDChanged();
     partial void OnemailChanging(string value);
     partial void OnemailChanged();
+    partial void OnCreatedOnChanging(System.DateTime value);
+    partial void OnCreatedOnChanged();
     #endregion
 		
 		public NewsLetter()
@@ -496,6 +500,26 @@ namespace KnowSL.Database
 					this._email = value;
 					this.SendPropertyChanged("email");
 					this.OnemailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this.OnCreatedOnChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedOn = value;
+					this.SendPropertyChanged("CreatedOn");
+					this.OnCreatedOnChanged();
 				}
 			}
 		}

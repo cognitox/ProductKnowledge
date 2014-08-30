@@ -20,10 +20,10 @@
         <elementListCompartment Id="c4574817-35d7-4243-bb42-7926360d4187" absoluteBounds="2.765, 3.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a181839f-c4e7-4aea-b026-81a716b9fc91" absoluteBounds="2.75, 0.5, 2, 1.1939925130208333">
+    <classShape Id="a181839f-c4e7-4aea-b026-81a716b9fc91" absoluteBounds="2.75, 0.5, 2, 1.3862939453125">
       <DataClassMoniker Name="/PKDatabaseDataContext/NewsLetter" />
       <nestedChildShapes>
-        <elementListCompartment Id="7560538b-c7a2-4158-8900-8bc1f5b33e2e" absoluteBounds="2.765, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="7560538b-c7a2-4158-8900-8bc1f5b33e2e" absoluteBounds="2.765, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="c2d704df-a9a4-4ec8-8526-e241a07a1292" absoluteBounds="5, 0.5, 2, 1.1939925130208333">

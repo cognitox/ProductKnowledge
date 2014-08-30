@@ -33,5 +33,17 @@ namespace KnowSL.Services
             return result;
         }
 
+        public List<NewsLetter> GetAll()
+        {
+            var result = new List<NewsLetter>();
+            try
+            {
+                var context = new PKDatabaseDataContext(ConfigurationManager.ConnectionStrings["DB_9B214B_ProductKnowledgeConnectionString"].ToString());
+                result = context.NewsLetters.ToList();
+            }
+            catch (Exception) { }
+            return result;            
+        }
+
     }
 }
