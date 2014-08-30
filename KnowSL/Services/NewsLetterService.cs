@@ -40,6 +40,7 @@ namespace KnowSL.Services
             {
                 var context = new PKDatabaseDataContext(ConfigurationManager.ConnectionStrings["DB_9B214B_ProductKnowledgeConnectionString"].ToString());
                 result = context.NewsLetters.ToList();
+
             }
             catch (Exception) { }
             return result;            

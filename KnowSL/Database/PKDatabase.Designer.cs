@@ -504,7 +504,7 @@ namespace KnowSL.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", IsDbGenerated=true)]
 		public System.DateTime CreatedOn
 		{
 			get

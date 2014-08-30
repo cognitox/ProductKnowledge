@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -15,6 +16,12 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,13 +72,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NewsLetterController.cs" />
-    <Compile Include="Database\PKDatabase.designer.cs">
+    <Compile Include="ContextDB\KSLDatabase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>KSLDatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredientController.cs" />
+    <Compile Include="Controllers\IngredientDescriptionController.cs" />
+    <Compile Include="Controllers\IngredientDescriptionTypeController.cs" />
+    <Compile Include="Controllers\NewsLetterController.cs" />
+    <Compile Include="Controllers\NewsLetterListController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductInredientLinkController.cs" />
+    <Compile Include="Database\PKDatabase.designer.cs">
       <DependentUpon>PKDatabase.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Enumerations\PilotSignupStatus.cs" />
     <Compile Include="Global.asax.cs">
@@ -180,23 +198,61 @@
     <None Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Content\themes\bootstrap-theme.css.map" />
     <None Include="Content\themes\bootstrap.css.map" />
+    <Content Include="Views\NewsLetter\Dashboard.cshtml" />
+    <EntityDeploy Include="ContextDB\KSLDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KSLDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Database\PKDatabase.dbml">
+      <SubType>Designer</SubType>
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>PKDatabase.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\NewsLetter\BetaUserList.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Database\PKDatabase.dbml.layout">
       <DependentUpon>PKDatabase.dbml</DependentUpon>
     </None>
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Ingredient\Index.cshtml" />
+    <Content Include="Views\Ingredient\Details.cshtml" />
+    <Content Include="Views\Ingredient\Create.cshtml" />
+    <Content Include="Views\Ingredient\Edit.cshtml" />
+    <Content Include="Views\Ingredient\Delete.cshtml" />
+    <Content Include="Views\IngredientDescription\Index.cshtml" />
+    <Content Include="Views\IngredientDescription\Details.cshtml" />
+    <Content Include="Views\IngredientDescription\Create.cshtml" />
+    <Content Include="Views\IngredientDescription\Edit.cshtml" />
+    <Content Include="Views\IngredientDescription\Delete.cshtml" />
+    <Content Include="Views\IngredientDescriptionType\Index.cshtml" />
+    <Content Include="Views\IngredientDescriptionType\Details.cshtml" />
+    <Content Include="Views\IngredientDescriptionType\Create.cshtml" />
+    <Content Include="Views\IngredientDescriptionType\Edit.cshtml" />
+    <Content Include="Views\IngredientDescriptionType\Delete.cshtml" />
+    <Content Include="Views\NewsLetterList\Index.cshtml" />
+    <Content Include="Views\NewsLetterList\Details.cshtml" />
+    <Content Include="Views\NewsLetterList\Create.cshtml" />
+    <Content Include="Views\NewsLetterList\Edit.cshtml" />
+    <Content Include="Views\NewsLetterList\Delete.cshtml" />
+    <Content Include="Views\ProductInredientLink\Index.cshtml" />
+    <Content Include="Views\ProductInredientLink\Details.cshtml" />
+    <Content Include="Views\ProductInredientLink\Create.cshtml" />
+    <Content Include="Views\ProductInredientLink\Edit.cshtml" />
+    <Content Include="Views\ProductInredientLink\Delete.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

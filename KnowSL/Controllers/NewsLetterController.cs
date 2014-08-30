@@ -36,31 +36,12 @@ namespace KnowSL.Controllers
             return RedirectToAction("Index", "Home", new { message = message });
         }
 
-        [HttpPost]
-        public ActionResult BetaUserList(UserLoginModel creds)
+        [Authorize]
+        public ActionResult BetaUserList()
         {
-            if (creds != null && !String.IsNullOrWhiteSpace(creds.UserName) && !String.IsNullOrWhiteSpace(creds.Password))
-            {
+            var viewModel = new NewsLetterService().GetAll();
+            return View("Dashboard", viewModel);
 
-                var viewModel = new List<NewsLetter>();
-
-                if (creds.UserName.ToLower() == @"eric@knowsl.com"
-                    && creds.Password == @"July20!4")
-                {
-
-                    HttpCookie aCookie = new HttpCookie("userInfo");
-                    aCookie.Value = DateTime.Now.ToString();
-                    aCookie.Expires = DateTime.Now.AddDays(1);
-                    Response.Cookies.Add(aCookie);
-                    viewModel = new NewsLetterService().GetAll();
-                }
-
-                if (Request.Cookies["userInfo"] != null)
-                {
-                    return View(viewModel);
-                }
-            }
-            return RedirectToAction("Index", "Home");
         }
     }
 }

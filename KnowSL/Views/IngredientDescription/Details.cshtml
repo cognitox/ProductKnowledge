@@ -1,0 +1,31 @@
+﻿@model KnowSL.ContextDB.IngredientDescription
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="scaffolding-template">
+    <h2>
+        Details</h2>
+    <fieldset>
+        <legend>IngredientDescription</legend>
+        <div class="display-label">
+            IngredientID</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.IngredientID)
+        </div>
+        <div class="display-label">
+            IngredientDescriptionTypeID</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.IngredientDescriptionTypeID)
+        </div>
+        <div class="display-label">
+            Details</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Details)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IngredientDescriptionID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

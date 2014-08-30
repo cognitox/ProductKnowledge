@@ -1,0 +1,40 @@
+﻿@model IEnumerable<KnowSL.ContextDB.NewsLetter>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="scaffolding-template">
+    <h2>
+        Beta User List</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table>
+        <tr>
+            <th>
+                email
+            </th>
+            <th>
+                CreatedOn
+            </th>
+            <th>
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedOn)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.NewsLetterID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.NewsLetterID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.NewsLetterID })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

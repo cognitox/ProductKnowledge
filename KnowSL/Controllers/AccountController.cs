@@ -28,6 +28,7 @@ namespace KnowSL.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 if (Membership.ValidateUser(model.UserName, model.Password))
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);

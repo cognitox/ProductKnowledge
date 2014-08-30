@@ -24,7 +24,7 @@
     <Type Name="NewsLetter">
       <Column Name="NewsLetterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Member="CreatedOn" Type="System.DateTime" CanBeNull="false" />
+      <Column Name="CreatedOn" AutoSync="Never" Type="System.DateTime" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.Product" Member="Products">

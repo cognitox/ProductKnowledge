@@ -4,12 +4,47 @@
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="SHORTCUT ICON" href="http://www.linksl.com/content/favicon.ico"/>
+    <link rel="SHORTCUT ICON" href="http://www.linksl.com/content/favicon.ico" />
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css' />
     <link href="@Url.Content("~/Content/themes/bootstrap.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Content/Site.css")" rel='stylesheet' type="text/css" />
     <script src="@Url.Content("~/Scripts/jquery.min.js")" type="text/javascript"></script>
+    <style type="text/css">
+        .scaffolding-template
+        {
+            width: 700px;
+            margin: 0 auto;
+            min-height: 700px;
+        }
+        
+        
+        .scaffolding-template table
+        {
+            font-family: verdana,arial,sans-serif;
+            font-size: 11px;
+            color: #333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+        .scaffolding-template table th, .display-label, .editor-label
+        {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+        .scaffolding-template table td, .display-field, .editor-field
+        {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+    </style>
 </head>
 <body>
     <div class="container header" style="min-height: 96px;">
@@ -19,7 +54,7 @@
             </div>
             <div class="col-md-4">
                 <div class="brand-site">
-                    KnowSL.com</div>
+                    <a href="/" style="color: white; text-decoration: none;">KnowSL.com</a></div>
             </div>
             <div class="col-md-6">
                 @Html.Partial("_LogOnPartial")

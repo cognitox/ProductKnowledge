@@ -1,0 +1,26 @@
+﻿@model KnowSL.ContextDB.NewsLetter
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="scaffolding-template">
+    <h2>
+        Details</h2>
+    <fieldset>
+        <legend>NewsLetter</legend>
+        <div class="display-label">
+            email</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.email)
+        </div>
+        <div class="display-label">
+            CreatedOn</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CreatedOn)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.NewsLetterID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

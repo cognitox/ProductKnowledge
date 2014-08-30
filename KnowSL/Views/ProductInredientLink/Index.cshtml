@@ -1,0 +1,41 @@
+﻿@model IEnumerable<KnowSL.ContextDB.ProductIngredientLink>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="scaffolding-template">
+    <h2>
+        Product Ingredient Link</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table>
+        <tr>
+            <th>
+                ProductID
+            </th>
+            <th>
+                IngredientID
+            </th>
+            <th>
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IngredientID)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductIngredientLinkID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductIngredientLinkID })
+                    |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductIngredientLinkID })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

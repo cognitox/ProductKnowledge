@@ -1,0 +1,45 @@
+﻿@model KnowSL.ContextDB.IngredientDescription
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="scaffolding-template">
+    <h2>
+        Create</h2>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>IngredientDescription</legend>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.IngredientID)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IngredientID)
+                @Html.ValidationMessageFor(model => model.IngredientID)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.IngredientDescriptionTypeID)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IngredientDescriptionTypeID)
+                @Html.ValidationMessageFor(model => model.IngredientDescriptionTypeID)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Details)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Details)
+                @Html.ValidationMessageFor(model => model.Details)
+            </div>
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    }
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
